@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Prediction</title>
+    <style>
+        body { font-family: Arial; margin: 50px; }
+        form { margin-bottom: 20px; }
+        input { margin: 5px; padding: 5px; }
+        button { padding: 8px 12px; }
+        .result { font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>Iris Flower Prediction</h1>
+    <form method="POST">
+        <label>Sepal Length:</label><input type="text" name="sepal_length"><br>
+        <label>Sepal Width:</label><input type="text" name="sepal_width"><br>
+        <label>Petal Length:</label><input type="text" name="petal_length"><br>
+        <label>Petal Width:</label><input type="text" name="petal_width"><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">Prediction: {{ prediction }}</div>
+    {% endif %}
+</body>
+</html>
